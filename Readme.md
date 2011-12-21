@@ -10,7 +10,7 @@ Get [pathogen][], then:
 
 ```
 cd ~/.vim/bundle
-git clone ...
+git clone git://github.com/felixge/vim-nodejs-errorformat.git
 ```
 
 ## Usage
