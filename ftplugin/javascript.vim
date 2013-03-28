@@ -8,7 +8,11 @@ let &makeprg="node %"
 " Error: bar
 "     at Object.foo [as _onTimeout] (/Users/Felix/.vim/bundle/vim-nodejs-errorformat/test.js:2:9)
 let &errorformat  = '%AError: %m' . ','
+let &errorformat .= '%AEvalError: %m' . ','
+let &errorformat .= '%ARangeError: %m' . ','
 let &errorformat .= '%AReferenceError: %m' . ','
+let &errorformat .= '%ASyntaxError: %m' . ','
+let &errorformat .= '%ATypeError: %m' . ','
 let &errorformat .= '%Z%*[\ ]at\ %f:%l:%c' . ','
 let &errorformat .= '%Z%*[\ ]%m (%f:%l:%c)' . ','
 
