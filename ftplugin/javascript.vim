@@ -46,7 +46,7 @@ function! HookCoreFilesIntoQuickfixWindow()
         " Clear all previous buffer contents
         execute ':1,%d'
         " Load the node.js core file (thanks @izs for pointing this out!)
-        silent! execute 'read !node -e "console.log(process.binding(\"natives\").' expand('%:r') ')"'
+        silent! execute 'read !node -e "console.log(process.binding(\"natives\").' expand('%:t:r') ')"'
         " Delete the first line, always empty for some reason
         execute ':1d'
         " Tell vim to treat this buffer as a JS file
